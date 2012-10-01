@@ -1,0 +1,229 @@
+/*
+Theme Name: My Own Template
+Theme URI: http://wordpress.org/extend/themes/twentyeleven
+Author: the WordPress team
+Author URI: http://wordpress.org/
+Description: The 2011 theme for WordPress is sophisticated, lightweight, and adaptable. Make it yours with a custom menu, header image, and background -- then go further with available theme options for light or dark color scheme, custom link colors, and three layout choices. Twenty Eleven comes equipped with a Showcase page template that transforms your front page into a showcase to show off your best content, widget support galore (sidebar, three footer areas, and a Showcase page widget area), and a custom "Ephemera" widget to display your Aside, Link, Quote, or Status posts. Included are styles for print and for the admin editor, support for featured images (as custom header images on posts and pages and as large images on featured "sticky" posts), and special styles for six different post formats.
+Version: 1.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: dark, light, white, black, gray, one-column, two-columns, left-sidebar, right-sidebar, fixed-width, flexible-width, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
+Text Domain: twentyeleven
+*/
+
+/* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
+-------------------------------------------------------------- */
+@charset "utf-8";
+/*
+	CSS Document 
+	COLORES:
+		#1ca0e0		- Azul claro
+		#016ac1		- Azul fuerte
+		#676767		- Gris
+		#ae1c00		- Rojo marron
+		#189800		- Verde
+		#f5b301		- Amarillo
+		#e7e7e7		- Gris bordes 
+*/
+body{
+	margin: 0;
+	padding: <length> 0 0 0;
+	background-color: #333333;
+}
+body:hover a{
+	text-decoration: none;
+}
+div#bgd{
+	background-color: #676767;
+	width: 960px;
+	margin: 0px auto 0px auto;
+}
+div#header{
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 960px;
+	margin-left: -480px;
+	height: 67px;
+	background-color: #676767;
+}
+@media screen{
+	body>div#header{
+		position: fixed;
+	}
+}
+* html body{
+	overflow: hidden;
+} 
+div#content{
+	width: 960px;
+	overflow: hidden;
+	margin: 67px auto 0px auto;
+}
+div#footer{
+	width: 960px;
+	overflow: auto;
+	margin: 5px auto 0px auto;
+}
+div#logo{
+	width: 200px;
+	height: 35px;
+	border: solid #000 1px;
+}
+div#menu{
+	margin-top: -1px;
+	height: 30px;
+}
+ul#menu-categorias{
+	list-style: none;
+	width: 916px;	
+	margin: 0px auto 0px auto;
+	height: 30px;
+}
+#menu-categorias li {
+	float:left;
+	display:block;
+	text-align:center;
+	position:relative;
+	padding: 4px 10px 4px 10px;
+	margin-right:30px;
+	margin-top:7px;
+	border:none;
+}
+#menu-categorias li:hover {
+	
+}
+#menu-categorias li a {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px; 
+	color: #ffffff;
+	font-weight: bold;
+	display:block;
+	outline:0;
+	-text-shadow: 1px 1px 1px #000;
+}
+#menu-categorias li:hover a {
+	color:#161616;
+	-text-shadow: 1px 1px 1px #ffffff;
+}
+div#articulos{
+	background-color: #ffffff;
+	width: 747px;
+	border: solid #1CA0E0 2px;
+	position: static;
+	float: left;
+}
+div#articulo_top{
+	background-color: #1ca0e0;
+	width: 100%;
+	height: 70px;
+	color: #ffffff;
+}
+div#menu_der{
+	margin-left: 5px;
+	width: 200px;
+	position: static;
+	float: left;
+}
+div.menu_der_titulo{
+	margin-top: 20px;
+	width: 100%;
+	color: #016ac1;
+	font-size: small;
+	font-weight: bold;
+}
+div.menu_der_subtitulo{
+	margin-top: 20px;
+	width: 100%;
+	font-size: small;
+	font-weight: bold;
+}
+div.menu_der_subtitulo a{
+	color: #000000;
+}
+div.menu_der_contenedor{
+	overflow: hidden;
+	margin-bottom: 10px;
+	color: #000000;
+}
+div.menu_der_contenedor:hover{
+	background-color: #016ac1;
+	color: #ffffff;
+}
+div.menu_der_contenedor:hover a{
+	color: #ffffff;
+}
+div#destacados{
+	background-color: #ffffff;
+	width: 100%;
+	border: solid #e7e7e7 2px;
+}
+div#editores{
+	background-color: #ffffff;
+	margin-top: 5px;
+	width: 100%;
+	border: solid #e7e7e7 2px;
+}
+div.editores_datos{
+	position: static;
+	float: left;
+	margin-left: 5px;
+}
+div.foto_editor{
+	width: 45px;
+	height: 45px;
+	border: solid #000000 1px;
+	position: static;
+	float: left;
+}
+div.editor_subtitulo{
+	width: 100%;
+	font-size: small;
+	font-weight: bold;
+}
+div.editor_subtitulo a{
+	color: #000000;
+}
+div.editor_subtitulo:hover a{
+	color: #ffffff;	
+}
+div.articulo_articulo{
+	width: 650px;
+	margin: 20px auto 0px auto;
+	overflow: hidden;
+}
+div.articulo_img{
+	width: 100px;
+	height: 100px;
+	border: solid #000000 1px;
+	position: static;
+	float: left;
+}
+div.articulo_cont{
+	margin-left: 5px;
+	width: 540px;
+	position: static;
+	float: left;
+}
+div.articulo_datos{
+	width: 100%;
+	font-size: x-small;
+}
+div.articulo_titulo{
+	width: 100%;
+	font-weight: bold;
+	font-size: large;
+}
+div.articulo_titulo a{
+	color: #000000;
+}
+div.articulo_titulo:hover a{
+	color: #1ca0e0;
+}
+div.articulo_resena{
+	width: 100%;
+}
+table#contacto{
+	width: 100%;
+	text-align: center;
+}
