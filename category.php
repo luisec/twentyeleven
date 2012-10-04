@@ -9,57 +9,138 @@
 
 get_header(); ?>
 
-		<section id="primary">
-			<div id="content" role="main">
+	
+    
+    
+<div id="content">
+<?php if (is_category('Internet')) : ?>
+    <div id="articulos" class="articulos_Internet">
+         <div id="articulo_top" class="articulo_top_Internet">
+<?php elseif (is_category('Software')) : ?>
+    <div id="articulos" class="articulos_Software">
+         <div id="articulo_top" class="articulo_top_Software">
+<?php elseif (is_category('Tutoriales')) : ?>
+    <div id="articulos" class="articulos_Tutoriales">
+         <div id="articulo_top" class="articulo_top_Tutoriales">
+<?php endif; ?>
+       Ultimas Noticias</div>
+        <div id="articulo_cont">
+            <div class="articulo_articulo">
+                <div class="articulo_img">Imagen</div>
+                <div class="articulo_cont">
+                    <div class="articulo_datos">
+                        <table>
+                            <tr>
+                                <td>Autor</td>
+                                <td>Fecha de Publicación</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="articulo_titulo"><a href="#">Titulo del Artículo</a></div>
+                    <div class="articulo_resena">
+                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 			Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="articulo_articulo">
+                <div class="articulo_img">Imagen</div>
+                <div class="articulo_cont">
+                    <div class="articulo_datos">
+                        <table>
+                            <tr>
+                                <td>Autor</td>
+                                <td>Fecha de Publicación</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="articulo_titulo"><a href="#">Titulo de la Galería</a></div>
+                    <div class="articulo_resena">
+                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 			Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
+                    </div>
+                </div>
+            </div>
+                
+            <div class="articulo_articulo">
+                <div class="articulo_img">Imagen</div>
+                <div class="articulo_cont">
+                    <div class="articulo_datos">
+                        <table>
+                            <tr>
+                                <td>Autor</td>
+                                <td>Fecha de Publicación</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="articulo_titulo"><a href="#">Titulo de la Cita</a></div>
+                    <div class="articulo_resena">
+                        <p>C'est en faisant n'importe quoi qu'on devient n'importe qui</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="articulo_articulo">
+                <div class="articulo_img">Imagen</div>
+                <div class="articulo_cont">
+                    <div class="articulo_datos">
+                        <table>
+                            <tr>
+                                <td>Autor</td>
+                                <td>Fecha de Publicación</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="articulo_titulo"><a href="#">Titulo del Artículo</a></div>
+                    <div class="articulo_resena">
+                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 			Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="articulo_articulo">
+                <div class="articulo_img">Imagen</div>
+                <div class="articulo_cont">
+                    <div class="articulo_datos">
+                        <table>
+                            <tr>
+                                <td>Autor</td>
+                                <td>Fecha de Publicación</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="articulo_titulo"><a href="#">Titulo de la Galería</a></div>
+                    <div class="articulo_resena">
+                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 			Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
+                    </div>
+                </div>
+            </div>
+                
+            <div class="articulo_articulo">
+                <div class="articulo_img">Imagen</div>
+                <div class="articulo_cont">
+                    <div class="articulo_datos">
+                        <table>
+                            <tr>
+                                <td>Autor</td>
+                                <td>Fecha de Publicación</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="articulo_titulo"><a href="#">Titulo de la Cita</a></div>
+                    <div class="articulo_resena">
+                        <p>C'est en faisant n'importe quoi qu'on devient n'importe qui</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="articulo_articulo"> paginacion </div>
+            
+            <br />
+        </div>
+    </div>
+    <div id="menu_der">
+        <?php get_sidebar(); ?>
+    </div>
+</div>
 
-			<?php if ( have_posts() ) : ?>
-
-				<header class="page-header">
-					<h1 class="page-title"><?php
-						printf( __( 'Category Archives: %s', 'twentyeleven' ), '<span>' . single_cat_title( '', false ) . '</span>' );
-					?></h1>
-
-					<?php
-						$category_description = category_description();
-						if ( ! empty( $category_description ) )
-							echo apply_filters( 'category_archive_meta', '<div class="category-archive-meta">' . $category_description . '</div>' );
-					?>
-				</header>
-
-				<?php twentyeleven_content_nav( 'nav-above' ); ?>
-
-				<?php /* Start the Loop */ ?>
-				<?php while ( have_posts() ) : the_post(); ?>
-
-					<?php
-						/* Include the Post-Format-specific template for the content.
-						 * If you want to overload this in a child theme then include a file
-						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-						 */
-						get_template_part( 'content', get_post_format() );
-					?>
-
-				<?php endwhile; ?>
-
-				<?php twentyeleven_content_nav( 'nav-below' ); ?>
-
-			<?php else : ?>
-
-				<article id="post-0" class="post no-results not-found">
-					<header class="entry-header">
-						<h1 class="entry-title"><?php _e( 'Nothing Found', 'twentyeleven' ); ?></h1>
-					</header><!-- .entry-header -->
-
-					<div class="entry-content">
-						<p><?php _e( 'Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.', 'twentyeleven' ); ?></p>
-						<?php get_search_form(); ?>
-					</div><!-- .entry-content -->
-				</article><!-- #post-0 -->
-
-			<?php endif; ?>
-
-			</div><!-- #content -->
-		</section><!-- #primary -->
-
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

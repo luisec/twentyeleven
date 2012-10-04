@@ -148,15 +148,37 @@ ul#menu-categorias-1{
 div#articulos{
 	background-color: #ffffff;
 	width: 747px;
-	border: solid #1CA0E0 2px;
 	position: static;
 	float: left;
 }
+div.articulos_Index{
+	border: solid #1CA0E0 2px;
+}
+div.articulos_Internet{
+	border: solid #ae1c00 2px;
+}
+div.articulos_Software{
+	border: solid #189800 2px;
+}
+div.articulos_Tutoriales{
+	border: solid #f5b301 2px;
+}
 div#articulo_top{
-	background-color: #1ca0e0;
 	width: 100%;
 	height: 70px;
 	color: #ffffff;
+}
+div.articulo_top_Index{
+	background-color: #1ca0e0;
+}
+div.articulo_top_Internet{
+	background-color: #ae1c00;
+}
+div.articulo_top_Software{
+	background-color: #189800;
+}
+div.articulo_top_Tutoriales{
+	background-color: #f5b301;
 }
 div#menu_der{
 	margin-left: 5px;
