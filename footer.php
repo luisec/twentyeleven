@@ -11,15 +11,12 @@
 ?>
 
     <div id="footer">
-    	<ul id="categorias">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Acerca de</a></li>
-            <li><a href="#">Privacidad</a></li>
-            <li><a href="#">Condiciones</a></li>
-        </ul>
+    	<?php dynamic_sidebar('sidebar-footer-1'); ?>
     </div>
     
-</div>
+
+<br />
+<br />
 
 </body>
 </html>

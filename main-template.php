@@ -15,7 +15,7 @@ get_header(); ?>
 					<?php //comments_template( '', true ); ?>
 				<?php //endwhile; // end of the loop. ?>
 
-<div id="bgd">
+
     <div id="content">
     	<div id="articulos">
         	<div id="articulo_top">Ultimas Noticias</div>
@@ -135,89 +135,10 @@ get_header(); ?>
         </div>
         <div id="menu_der">
         	<div id="destacados">
-            	<div class="menu_der_titulo">Noticias Destacadas</div>
-				<div class="menu_der_contenedor">
-                	<div class="menu_der_subtitulo"><a href="#">Nombre de la Noticia</a></div>
-                    <div class="articulo_datos">
-                        	<table>
-                            	<tr>
-                                	<td>Autor</td>
-                                    <td>Fecha de Publicación</td>
-                                </tr>
-                            </table>
-                        </div>
-                </div>
-                
-                <div class="menu_der_contenedor">
-                	<div class="menu_der_subtitulo"><a href="#">Nombre de la Noticia</a></div>
-                    <div class="articulo_datos">
-                        	<table>
-                            	<tr>
-                                	<td>Autor</td>
-                                    <td>Fecha de Publicación</td>
-                                </tr>
-                            </table>
-                        </div>
-                </div>
-                
-                <div class="menu_der_contenedor">
-                	<div class="menu_der_subtitulo"><a href="#">Nombre de la Noticia</a></div>
-                    <div class="articulo_datos">
-                        	<table>
-                            	<tr>
-                                	<td>Autor</td>
-                                    <td>Fecha de Publicación</td>
-                                </tr>
-                            </table>
-                        </div>
-                </div>
-                
-                <div class="menu_der_contenedor">
-                	<div class="menu_der_subtitulo"><a href="#">Nombre de la Noticia</a></div>
-                    <div class="articulo_datos">
-                        	<table>
-                            	<tr>
-                                	<td>Autor</td>
-                                    <td>Fecha de Publicación</td>
-                                </tr>
-                            </table>
-                        </div>
-                </div>
+            	<?php dynamic_sidebar('sidebar-destacados'); ?>
             </div>
             <div id="editores">
-            	<div class="menu_der_titulo">Editores</div>
-                <br />
-                <div class="menu_der_contenedor">
-                	<div class="foto_editor"></div>
-                    <div class="editores_datos">
-	                    <div class="editor_subtitulo"><a href="#">Rol</a></div>
-                        <div class="editor_subtitulo">Nombre del Editor</div>
-                    </div>
-                </div>
-                
-                <div class="menu_der_contenedor">
-                	<div class="foto_editor"></div>
-                    <div class="editores_datos">
-	                    <div class="editor_subtitulo"><a href="#">Rol</a></div>
-                        <div class="editor_subtitulo">Nombre del Editor</div>
-                    </div>
-                </div>
-                
-                <div class="menu_der_contenedor">
-                	<div class="foto_editor"></div>
-                    <div class="editores_datos">
-	                    <div class="editor_subtitulo"><a href="#">Rol</a></div>
-                        <div class="editor_subtitulo">Nombre del Editor</div>
-                    </div>
-                </div>
-                
-                <div class="menu_der_contenedor">
-                	<div class="foto_editor"></div>
-                    <div class="editores_datos">
-	                    <div class="editor_subtitulo"><a href="#">Rol</a></div>
-                        <div class="editor_subtitulo">Nombre del Editor</div>
-                    </div>
-                </div>
+                <?php dynamic_sidebar('sidebar-editores'); ?>
             </div>
             
             <div id="editores">

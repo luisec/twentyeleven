@@ -415,7 +415,39 @@ function twentyeleven_widgets_init() {
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 	) );
-
+//=======================================================================================================
+//			My Functions
+//=======================================================================================================
+	register_sidebar( array(
+		'name' => __( 'Side Bar Footer', 'twentyeleven' ),
+		'id' => 'sidebar-footer-1',
+		'description' => __( 'An optional widget area for your site footer', 'twentyeleven' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => "</aside>",
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+	
+	register_sidebar( array(
+		'name' => __( 'Destacados Sidebar', 'twentyeleven' ),
+		'id' => 'sidebar-destacados',
+		'description' => __( 'The sidebar for the optional Showcase Template', 'twentyeleven' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => "</aside>",
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+	
+	register_sidebar( array(
+		'name' => __( 'Editores Sidebar', 'twentyeleven' ),
+		'id' => 'sidebar-editores',
+		'description' => __( 'The sidebar for the optional Showcase Template', 'twentyeleven' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => "</aside>",
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+//=======================================================================================================
 	register_sidebar( array(
 		'name' => __( 'Footer Area Two', 'twentyeleven' ),
 		'id' => 'sidebar-4',
