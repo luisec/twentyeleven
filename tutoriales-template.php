@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Main Template
+ * Template Name: Tutoriales Template
  * Description: A Page Template that adds a sidebar to pages
  *
  * @package WordPress
@@ -13,8 +13,8 @@ get_header(); ?>
 				
                 
 <div id="content">
-    <div id="articulos" class="articulos_Index">
-        <div id="articulo_top" class="articulo_top_Index"><h2>Ultimas Noticias<h2></div>
+    <div id="articulos" class="articulos_Tuturiales">
+        <div id="articulo_top" class="articulo_top_Tutoriales"><h2>Ultimas Noticias<h2></div>
         <div id="articulo_cont">
         	<?php while ( have_posts() ) : the_post(); ?>
 				

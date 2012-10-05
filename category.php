@@ -1,5 +1,6 @@
 <?php
 /**
+ * Template Name: Category Template
  * The template for displaying Category Archive pages.
  *
  * @package WordPress
@@ -10,19 +11,8 @@
 get_header(); ?>
 
 	
-    
-    
-<div id="content">
-<?php if (is_category('Internet')) : ?>
-    <div id="articulos" class="articulos_Internet">
-         <div id="articulo_top" class="articulo_top_Internet">
-<?php elseif (is_category('Software')) : ?>
-    <div id="articulos" class="articulos_Software">
-         <div id="articulo_top" class="articulo_top_Software">
-<?php elseif (is_category('Tutoriales')) : ?>
-    <div id="articulos" class="articulos_Tutoriales">
-         <div id="articulo_top" class="articulo_top_Tutoriales">
-<?php endif; ?>
+<div id="articulos" class="articulos_Internet">
+	<div id="articulo_top" class="articulo_top_Internet">
        Ultimas Noticias</div>
         <div id="articulo_cont">
             <div class="articulo_articulo">

@@ -33,9 +33,13 @@ body{
 body:hover a{
 	text-decoration: none;
 }
+body h2{
+	font-size: medium;
+	color: #ffffff;
+	margin-top:
+}
 body h3{
 	font-size: small;
-	font-weight: bold;
 	color: #016ac1;
 }
 div#bgd2{
