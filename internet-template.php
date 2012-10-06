@@ -30,7 +30,7 @@ get_header(); ?>
                             <tr>
                                 <td><?php echo $author = get_the_author(); ?></td>
                                 <td>|</td>
-                                <td><?php the_date(); ?></td>
+                                <td><?php echo get_the_date(); ?></td>
                             </tr>
                         </table>
                     </div>
@@ -38,13 +38,13 @@ get_header(); ?>
                     	<a href="<?php echo get_permalink(); ?>"><?php echo get_the_title(); ?></a>
                     </div>
                     <div class="articulo_resena">
-                        
+                        <?php the_excerpt(); ?>
                     </div>
                 </div>
                 
             </div>
             <?php endwhile; // end of the loop. ?>
-            <div class="articulo_articulo"> paginacion </div>
+            <div class="articulo_articulo"><?php wp_pagenavi(); ?></div>
             
             <br />
         </div>

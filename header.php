@@ -71,6 +71,7 @@
 
 	<div id="header">
     	<div id="logo">LOGO</div>
+        <div id="searchHolder"><?php dynamic_sidebar('search-container'); ?></div>
         <div id="menu">
         	<?php wp_nav_menu(array ('theme_location' => 'primary')); ?>
         </div>

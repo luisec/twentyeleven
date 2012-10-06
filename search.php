@@ -9,49 +9,47 @@
 
 get_header(); ?>
 
-		<section id="primary">
-			<div id="content" role="main">
-
-			<?php if ( have_posts() ) : ?>
-
-				<header class="page-header">
-					<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'twentyeleven' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-				</header>
-
-				<?php twentyeleven_content_nav( 'nav-above' ); ?>
-
-				<?php /* Start the Loop */ ?>
-				<?php while ( have_posts() ) : the_post(); ?>
-
-					<?php
-						/* Include the Post-Format-specific template for the content.
-						 * If you want to overload this in a child theme then include a file
-						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-						 */
-						get_template_part( 'content', get_post_format() );
-					?>
-
-				<?php endwhile; ?>
-
-				<?php twentyeleven_content_nav( 'nav-below' ); ?>
-
-			<?php else : ?>
-
-				<article id="post-0" class="post no-results not-found">
-					<header class="entry-header">
-						<h1 class="entry-title"><?php _e( 'Nothing Found', 'twentyeleven' ); ?></h1>
-					</header><!-- .entry-header -->
-
-					<div class="entry-content">
-						<p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'twentyeleven' ); ?></p>
-						<?php get_search_form(); ?>
-					</div><!-- .entry-content -->
-				</article><!-- #post-0 -->
-
-			<?php endif; ?>
-
-			</div><!-- #content -->
-		</section><!-- #primary -->
-
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+<div id="content">
+    <div id="articulos" class="articulos_Busqueda">
+        <div id="articulo_top" class="articulo_top_Busqueda">
+        	<h2><?php printf( __( 'Search Results for: %s', 'twentyeleven' ), '<span>' . get_search_query() . '</span>' ); ?><h2>
+        </div>
+        <div id="articulo_cont">
+        
+        <?php if ( have_posts() ) : ?>
+        	<?php while ( have_posts() ) : the_post(); ?>
+            <div class="articulo_articulo">
+                <div class="articulo_cont">
+                    <div class="articulo_datos">
+                        <table>
+                            <tr>
+                                <td><?php echo get_the_author(); ?></td>
+                                <td>|</td>
+                                <td><?php echo get_the_date(); ?></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="articulo_titulo">
+                    	<a href="#"><?php the_title(); ?></a>
+                    </div>
+                    <div class="articulo_resena">
+                        <?php the_excerpt();?>
+                    </div>
+                </div>
+            </div>
+            <?php endwhile; ?>   
+		<?php else : ?>
+            <p><?php _e( 'Nothing Found', 'twentyeleven' ); ?></p>
+            <p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'twentyeleven' ); ?></p>
+			<?php get_search_form(); ?>
+		<?php endif; ?>
+            
+            <div class="articulo_articulo"><?php wp_pagenavi(); ?></div>
+            
+            <br />
+        </div>
+    </div>
+    <div id="menu_der">
+        <?php get_sidebar(); ?>
+    </div>
+</div>

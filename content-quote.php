@@ -7,7 +7,6 @@
  * @since Twenty Eleven 1.0
  */
 ?>
-
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<header class="entry-header">
 			<hgroup>
@@ -36,7 +35,6 @@
 			<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>
 		</div><!-- .entry-content -->
 		<?php endif; ?>
-
 		<footer class="entry-meta">
 			<?php $show_sep = false; ?>
 			<?php
