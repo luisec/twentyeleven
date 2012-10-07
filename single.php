@@ -9,24 +9,51 @@
 
 get_header(); ?>
 
-		<div id="primary">
-			<div id="content" role="main">
 
-				<?php while ( have_posts() ) : the_post(); ?>
+<div id="content">
+	<?php while ( have_posts() ) : the_post(); ?>
+    
+    
+    <div id="articulos" class="articulos_single">
+        <div id="articulo_top" class="articulo_top_Single">
 
-					<nav id="nav-single">
-						<h3 class="assistive-text"><?php _e( 'Post navigation', 'twentyeleven' ); ?></h3>
-						<span class="nav-previous"><?php previous_post_link( '%link', __( '<span class="meta-nav">&larr;</span> Previous', 'twentyeleven' ) ); ?></span>
-						<span class="nav-next"><?php next_post_link( '%link', __( 'Next <span class="meta-nav">&rarr;</span>', 'twentyeleven' ) ); ?></span>
-					</nav><!-- #nav-single -->
+        	<h2><?php the_title(); ?><h2>
+			<div class="articulo_datos">
+                <table>
+                    <tr>
+                        <td><?php echo get_the_author(); ?></td>
+                        <td>|</td>
+                        <td><?php echo get_the_date(); ?></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="articulo_cont">
+        
+            <div class="articulo_articulo">
+                <?php get_template_part( 'content', 'single' ); ?>
+            </div>
+            
+            <div class="articulo_nav">
+            	<?php _e( 'Post navigation', 'twentyeleven' ); ?>
+				<?php previous_post_link( '%link', __( '<span class="meta-nav">&larr;</span> Previous', 'twentyeleven' ) ); ?>
+				<?php next_post_link( '%link', __( 'Next <span class="meta-nav">&rarr;</span>', 'twentyeleven' ) ); ?>
+            </div>
+            
+            <div class="articulo_articulo"><hr /></div>
+            <?php if ( comments_open() && ! post_password_required() ) : ?>
+            <div class="articulo_Comments"><?php comments_template( '', true ); ?></div>
+			<?php endif ?>
 
-					<?php get_template_part( 'content', 'single' ); ?>
-
-					<?php comments_template( '', true ); ?>
-
-				<?php endwhile; // end of the loop. ?>
-
-			</div><!-- #content -->
-		</div><!-- #primary -->
+            <br />
+        </div>
+    </div>
+    <?php endwhile; // end of the loop. ?>
+    
+    <div id="menu_der">
+        <?php get_sidebar(); ?>
+    </div>
+    
+</div>
 
 <?php get_footer(); ?>

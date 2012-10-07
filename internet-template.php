@@ -14,7 +14,7 @@ get_header(); ?>
                 
 <div id="content">
     <div id="articulos" class="articulos_Internet">
-        <div id="articulo_top" class="articulo_top_Internet"><h2>Ultimas Noticias<h2></div>
+        <div id="articulo_top" class="articulo_top_Internet"><h2>Ultimas Publicaciones | Internet<h2></div>
         <div id="articulo_cont">
         	<?php while ( have_posts() ) : the_post(); ?>
 				

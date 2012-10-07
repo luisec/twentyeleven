@@ -14,32 +14,37 @@ get_header(); ?>
                 
 <div id="content">
     <div id="articulos" class="articulos_Software">
-        <div id="articulo_top" class="articulo_top_Software"><h2>Ultimas Noticias<h2></div>
+        <div id="articulo_top" class="articulo_top_Software"><h2>Ultimas Publicaciones | Software<h2></div>
         <div id="articulo_cont">
         	<?php while ( have_posts() ) : the_post(); ?>
 				
         
             <div class="articulo_articulo">
             
-                <div class="articulo_img">Imagen</div>
+                <div class="articulo_img">
+                	<?php echo get_the_post_thumbnail($page->ID, 'thumbnail'); ?>
+                </div>
                 <div class="articulo_cont">
                     <div class="articulo_datos">
                         <table>
                             <tr>
-                                <td>Autor</td>
-                                <td>Fecha de Publicación</td>
+                                <td><?php echo $author = get_the_author(); ?></td>
+                                <td>|</td>
+                                <td><?php echo get_the_date(); ?></td>
                             </tr>
                         </table>
                     </div>
-                    <div class="articulo_titulo"><a href="#"><?php echo get_the_title(); ?></a></div>
+                    <div class="articulo_titulo">
+                    	<a href="<?php echo get_permalink(); ?>"><?php echo get_the_title(); ?></a>
+                    </div>
                     <div class="articulo_resena">
-                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 			Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
+                        <?php the_excerpt(); ?>
                     </div>
                 </div>
                 
             </div>
             <?php endwhile; // end of the loop. ?>
-            <div class="articulo_articulo"> paginacion </div>
+            <div class="articulo_articulo"><?php wp_pagenavi(); ?></div>
             
             <br />
         </div>
@@ -47,8 +52,7 @@ get_header(); ?>
     <div id="menu_der">
         <?php get_sidebar(); ?>
     </div>
-</div>
-    
+</div>    
 
 
 

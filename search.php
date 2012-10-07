@@ -30,7 +30,7 @@ get_header(); ?>
                         </table>
                     </div>
                     <div class="articulo_titulo">
-                    	<a href="#"><?php the_title(); ?></a>
+                    	<a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a>
                     </div>
                     <div class="articulo_resena">
                         <?php the_excerpt();?>

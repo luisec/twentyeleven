@@ -8,53 +8,11 @@
  */
 ?>
 
-<div id="content">
-    <div id="articulos" class="articulos_Internet">
-        <div id="articulo_top" class="articulo_top_Internet"><h2><?php the_title(); ?><h2></div>
-        <div id="articulo_cont">
-        
-            <div class="articulo_articulo">
-            
-                <div class="articulo_img">
-                </div>
-                <div class="articulo_cont">
-                    <div class="articulo_datos">
-                        <table>
-                            <tr>
-                                <td>-</td>
-                                <td>|</td>
-                                <td>-</td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="articulo_titulo">
-                    	<a href="#">titulo del articulo</a>
-                    </div>
-                    <div class="articulo_resena">
-                        reseña del articulo
-                    </div>
-                </div>
-                
-            </div>
-            <div class="articulo_articulo">paginación</div>
-            
-            <br />
-        </div>
-    </div>
-    <div id="menu_der">
-        <?php get_sidebar(); ?>
-    </div>
-</div>
-
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<header class="entry-header">
 			<?php if ( is_sticky() ) : ?>
 				<hgroup>
-					<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyeleven' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a>-----</h2>
+					<h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyeleven' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 					<h3 class="entry-format"><?php _e( 'Featured', 'twentyeleven' ); ?></h3>
 				</hgroup>
 			<?php else : ?>
