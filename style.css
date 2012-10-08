@@ -70,7 +70,7 @@ div#content{
 	background-color: #676767;
 	width: 960px;
 	overflow: hidden;
-	margin: 39px auto 0px auto;
+	margin: 67px auto 0px auto;
 }
 div#footer{
 	background-color: #676767;
@@ -186,6 +186,12 @@ div#articulo_top{
 	color: #ffffff;
 	overflow: hidden;
 }
+div#articulo_top a{
+	color: #ffffff;
+}
+div#articulo_top a:hover{
+	color: #000000;
+}
 div.articulo_top_Index{
 	background-color: #1ca0e0;
 }
@@ -242,6 +248,7 @@ div#destacados{
 	background-color: #ffffff;
 	width: 100%;
 	border: solid #e7e7e7 2px;
+	overflow: hidden;
 }
 div#destacados li{
 	font-size: small;
@@ -330,6 +337,12 @@ div.articulo_cont{
 	width: 540px;
 	position: static;
 	float: left;
+}
+div#articulo_cont a{
+	color: #000000;	
+}
+div#articulo_cont a:hover{
+	color: #1ca0e0;	
 }
 div.articulo_datos{
 	width: 100%;
